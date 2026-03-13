@@ -12,8 +12,7 @@
         <div class="header-content">
             <h1>The Fragrant Flower Blooms with Dignity</h1>
             <div class="video-container">
-                <!-- Removi o link de volta para index no iframe para evitar loops de clique -->
-                <iframe class="video" src="videoplayback.1773425011214.publer.com.mp4" frameborder="0"></iframe>
+                <iframe class="video" src="videoplayback.1773425011214.publer.com.mp4" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -34,54 +33,64 @@
 
     <div class="main-wrapper">
         <aside class="sidebar">
-            <details> 
+            <details open> 
                 <summary>
                     <h2>Categorias</h2>
                 </summary>
                 <ul class="category-list">
                     <li><a href="#">Momentos Românticos</a></li>
-                    <li><a href="#">Romance</a></li>
-                    <li><a href="#">Momentos de Comédia</a></li>
-                    <li><a href="#">Momentos de Tristeza</a></li>
+                    <li><a href="#">Romance Escolar</a></li>
+                    <li><a href="#">Comédia</a></li>
+                    <li><a href="#">Momentos Emocionantes</a></li>
                 </ul>
             </details>
         </aside>
 
         <main class="content-area">
             <section>
-                <h2 class="section-title">A história do anime</h2>
-                <div class="image-header">
-                    <img src="images.jpg" alt="Personagens do anime">
-                </div>
-                <p>Esse site é dedicado a fãs do anime "The Fragrant Flower Blooms with Dignity".</p>
+                <h2>Sobre o Anime</h2>
+                <p>The Fragrant Flower Blooms with Dignity (Kaoru Hana wa Rin to Saku) é um anime de romance e vida cotidiana de 2025, produzido pelo estúdio CloverWorks, aclamado por sua abordagem sensível, fim de preconceitos e desenvolvimento emocional lindo dos personagens.</p>
+            </section>
+
+            <section id="sobre">
+                <h2>Sobre os personagens</h2>
+                <p>Alguns dos personagens principais incluem:</p>
+                <ul>
+                    <li><strong>Kaoruko Waguri</strong>: A protagonista feminina. Uma estudante da escola de elite Kikyo, conhecida por seu sorriso radiante, gentileza imensa e um apetite enorme por bolos.</li>
+                    <li><strong>Rintaro Tsumugi</strong>: O protagonista masculino. Estuda na escola Chidori (vista como um antro de delinquentes). Apesar do rosto assustador e altura, é extremamente gentil e ajuda na confeitaria de sua família.</li>
+                    <li><strong>Subaru Hoshina</strong>: A melhor amiga de Kaoruko. Inicialmente desconfiada dos garotos da Chidori, ela é protetora, observadora e muito leal.</li>
+                    <li><strong>Shohei & Ayato</strong>: Os melhores amigos de Rintaro. Trazem muita comédia para a história, mas também mostram o verdadeiro significado de amizade e apoio mútuo.</li>
+                </ul>
             </section>
 
             <section>
-                <h2>A Comunidade e a História</h2>
+                <h2 class="section-title">A Comunidade e a História</h2>
                 <div class="image-header">
                     <img src="images.jpg" alt="Ilustração da comunidade">
                 </div>
-                <p>A comunidade é um espaço onde os fãs podem compartilhar experiências, discutir teorias e celebrar os momentos memoráveis que tornam esta obra tão especial.</p>        
+                <p>A comunidade é um espaço onde os fãs podem compartilhar experiências, discutir teorias e celebrar os momentos memoráveis que tornam esta obra tão especial, unindo alunos de duas escolas tão diferentes.</p>        
             </section>
 
             <section class="qa-section">
-                <h1>O que você gostaria de saber?</h1>
-                <form>
-                    <input type="text" name="pergunta" placeholder="Digite sua pergunta aqui">
-                    <button type="submit" class="btn-send">Enviar</button>
-                    <button type="reset" class="btn-clear">Limpar</button>
+                <h2>O que você gostaria de saber?</h2>
+                <form class="form-pergunta">
+                    <input type="text" name="pergunta" placeholder="Digite sua pergunta aqui..." required>
+                    <div class="botoes-form">
+                        <button type="submit" class="btn-send">Enviar</button>
+                        <button type="reset" class="btn-clear">Limpar</button>
+                    </div>
                 </form>
             </section>
 
             <section>
                 <h2>Cenas Memoráveis</h2>
                 <form>
-                    <select name="cenas" id="cenas-select">
+                    <select name="cenas" id="cenas-select" class="select-cenas">
                         <option value="romance">Momentos Românticos</option>
                         <option value="comedia">Cenas de Comédia</option>
-                        <option value="drama">Momentos de Drama</option>
+                        <option value="drama">Momentos Emocionantes</option>
                         <option value="personagens">Desenvolvimento dos Personagens</option>
-                        <option value="ending">Finais Inesperados</option>
+                        <option value="bolo">Cenas comendo bolo no Café</option>
                     </select>
                 </form>
             </section>
@@ -89,7 +98,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 - Fã Clube The Fragrant Flower</p>
+        <p>&copy; 206 - Fã Clube The Fragrant Flower</p>
     </footer>
 
 </body>

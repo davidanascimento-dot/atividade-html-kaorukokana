@@ -1,18 +1,54 @@
-
+/* --- RESET BÁSICO --- */
 body {
     font-family: Arial, sans-serif;
     margin: 0; 
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #fcf4f9; /* Fundo levemente rosado */
+    color: #333;
+    line-height: 1.6;
 }
 
+/* --- CABEÇALHO --- */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: bisque;
+    background-color: #ce70b6; /* Rosa da obra */
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    margin: 0 0 20px 0;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.video {
+    width: 100%;
+    height: 315px; /* Altura padrão de iframe de vídeo */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header-description {
+    background-color: #f2e1f0;
+    text-align: center;
+    padding: 15px;
+    color: #542a5c;
+}
+
+/* --- NAVEGAÇÃO --- */
 .header-nav {
     background-color: #f2f2f2;
     padding: 15px;
     display: flex;
     justify-content: center;
-    gap: 40px;
-    border-bottom: 2px solid #ce70b6c0; 
+    border-bottom: 3px solid #ce70b6; 
 }
 
 .header-nav ul {
@@ -21,51 +57,157 @@ body {
     margin: 0;
     padding: 0;
     gap: 40px;
+    flex-wrap: wrap; /* Ajuda no celular */
 }
 
 .header-nav a {
     text-decoration: none;
     color: #542a5c;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
+.header-nav a:hover {
+    color: #ce70b6;
+}
 
-.header-content {
+/* --- LAYOUT PRINCIPAL (SIDEBAR + CONTEÚDO) --- */
+.main-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: bisque;
-    background-color: #ce70b6c0;
-    padding: 20px;
-    margin: 20px; 
-    border-radius: 5px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 30px;
 }
 
-
-.main-container {
-    display: flex;
-    margin: 20px;
-    gap: 20px;
-}
-
+/* --- SIDEBAR --- */
 .sidebar {
-    width: 150px;
-    background-color: #542a5ce3;
+    width: 250px;
+    background-color: #542a5c; /* Roxo escuro */
     color: white;
-    padding:5px;
-    border-radius: 5px;
-}
-
-.header-meio {
-    flex: 1;
-    background: #d18ae2;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
+    align-self: flex-start; /* Para não esticar até o fim da página */
 }
 
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+    cursor: pointer;
+}
 
-.video {
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.category-list li {
+    margin-bottom: 10px;
+}
+
+.category-list a {
+    color: #f2e1f0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.category-list a:hover {
+    color: bisque;
+    text-decoration: underline;
+}
+
+/* --- ÁREA DE CONTEÚDO --- */
+.content-area {
+    flex: 1; /* Faz ocupar todo o espaço restante */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.content-area section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.content-area section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #ce70b6;
+}
+
+.content-area ul {
+    padding-left: 20px;
+}
+
+.content-area li {
+    margin-bottom: 10px;
+}
+
+.image-header img {
     max-width: 100%;
-    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* --- FORMULÁRIOS --- */
+.form-pergunta input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
+}
+
+.botoes-form {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-send, .btn-clear {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-send {
+    background-color: #ce70b6;
+}
+
+.btn-send:hover {
+    background-color: #b55a9e;
+}
+
+.btn-clear {
+    background-color: #999;
+}
+
+.btn-clear:hover {
+    background-color: #777;
+}
+
+.select-cenas {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: #542a5c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
 }
